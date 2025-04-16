@@ -51,7 +51,7 @@ ram.runtime = "50M"
     url = "https://github.com/tchapi/davis/archive/refs/tags/v5.0.2.tar.gz"
     sha256 = "c37e79e05b36a2e42a34c83e26f2efb58eb4d47c083875f20673d5358740efa7"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
     allow_email = true
