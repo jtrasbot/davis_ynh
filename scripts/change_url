@@ -7,6 +7,9 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+timezone=$(cat /etc/timezone)
+key=$(ynh_string_random --length=32)
+
 #=================================================
 # MODIFY URL IN NGINX CONF
 #=================================================
@@ -14,6 +17,13 @@ ynh_script_progression "Updating NGINX web server configuration..."
 
 # this will most likely adjust NGINX config correctly
 ynh_config_change_url_nginx
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template=".env.local" --destination="$install_dir/.env.local"
 
 #=================================================
 # END OF SCRIPT
