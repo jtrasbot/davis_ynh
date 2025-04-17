@@ -1,1 +1,1 @@
-A simple, fully translatable admin interface and frontend for sabre/dav based on Symfony 7 and Bootstrap 5, initially inspired by Baïkal.
+Davis is a lightweight CalDAV+CardDAV server. It offers an extensive web interface with easy management of users, address books and calendars. It is fast and simple to install and only needs a basic PHP capable server. The data are stored in a PostgreSQL database.
